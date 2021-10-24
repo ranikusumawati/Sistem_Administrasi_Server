@@ -9,52 +9,67 @@
 ```
 sudo lxc-ls -f
 ```
-![1 fix](C:\Users\USEER\Downloads\1 fix.jpeg)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+</p>
 
 1.2 Kode ini untuk menyalin daripada mengubah nama container dari ubuntu_php5.6 menjadi ubuntu_landing.
 ```
 sudo lxc-copy -R -n ubuntu_php5.6 -N ubuntu_landing
 ```
-![image-20211024190208627](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024190208627.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+</p>
 
 1.3 Menampikan Container setelah dirubah	
 ```
 sudo lxc-ls -f
 ```
-![1.1f](C:\Users\USEER\Downloads\1.1f.jpeg)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+</p>
 
 1.4 Start Ubuntu landing
 ```
 sudo lxc-start ubuntu_landing
 ```
-![](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024190344879.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+</p>
 
 1.5 Masuk ke root ubuntu_landing container
 ```
 sudo lxc-attach ubuntu_landing
 ```
-![image-20211024190514738](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024190514738.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+</p>
 
 1.6 Setting IP yang mengikuti skema baru
 ```
 nano /etc/network/interfaces
 ```
-![image-20211024191256525](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024191256525.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+</p>
 
 1.7 Restart container
 ```
 shutdown now
 sudo lxc-start ubuntu_landing
 ```
-![image-20211024191906084](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024191906084.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+</p>
 
 1.8 Setelah Restart lalu check IP apakh sudah berubah
 ```
 lxc-attach ubuntu_landing
 ifconfig
 ```
-![image-20211024192907362](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024192907362.png)
-
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+</p>
 Dan IP sudah berubah menjadi 10.0.3.103
 
 Inilah step bagaimana merename ubuntu_php5.6 menjadi ubuntu_landing, serta merubah IP mengikuti skema yang baru.
