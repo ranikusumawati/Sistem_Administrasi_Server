@@ -182,31 +182,45 @@ Yang dapat kita simpulkan yaitu kita membutuhkan memasukkan cd lxc_php5.6 sebelu
 
 
 
-4. Setup nginx pada ubuntu_landing untuk domain http://lxc_landing.dev , buat halaman index.html yang menerangkan informasi nama lxc
+### 4. Setup nginx pada ubuntu_landing untuk domain http://lxc_landing.dev , buat halaman index.html yang menerangkan informasi nama lxc
 
-   Langkahnya seperti nomer 3
+Langkahnya seperti nomer 3
 
-   4.1 Ikuti Langkah-langkah dibawah ini :
+4.1 Ikuti Langkah-langkah dibawah ini :
 
-   ![image-20211024213855650](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024213855650.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/4.1.1.PNG">
+</p>
 
-![image-20211024213956223](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024213956223.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/4.1.2.PNG">
+</p>
 
-![image-20211024214300936](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024214300936.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/4.1.3.PNG">
+</p>
 
-![image-20211024214353558](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024214353558.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/4.1.4.PNG">
+</p>
 
-![image-20211024214432926](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024214432926.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/4.1.5.PNG">
+</p>
 
-![image-20211024214457380](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024214457380.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/4.1.6.PNG">
+</p>
 
-   4. 2 Lalu kita membutuhkan untuk mengecek command curl
+4. 2 Lalu kita membutuhkan untuk mengecek command curl
+```
+curl -i http://lxc_landing.dev
+```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/4.2.PNG">
+</p>
 
-      ```
-      			curl -i http://lxc_landing.dev
-      ```
 
-![image-20211024214621591](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024214621591.png)
 
 5. LXC ubuntu_landing harus auto start ketika vm dinyalakan, hal ini digunakan untuk menjaga agar website company profile tidak mengalami *downtime*
 
