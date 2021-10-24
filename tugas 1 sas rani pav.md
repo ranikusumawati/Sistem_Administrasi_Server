@@ -304,7 +304,7 @@ curl -i http://vm.local/
       	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/6.5.PNG">
 </p>
 
-6.7 Mengakses http://vm.local/app  akan diarahkan ke http://lxc_php5.dev
+6.6 Mengakses http://vm.local/app  akan diarahkan ke http://lxc_php5.dev
 ```
 curl -i http://vm.local/app
 ```
@@ -314,25 +314,28 @@ curl -i http://vm.local/app
 
 
 
-7. Untuk kebutuhan presentasi mereka, browser di laptop mereka harus dapat mengakses ketiga url tersebut.
+### 7. Untuk kebutuhan presentasi mereka, browser di laptop mereka harus dapat mengakses ketiga url tersebut.
+```
+http://vm.local/
+```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/7.1.PNG">
+</p>
+```
+http://vm.local/app
+```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/7.2.PNG">
+</p>
 
 ```
-	http://vm.local/
+http://vm.local/blog
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/7.3.PNG">
+</p>
 
-![image-20211024222222224](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024222222224.png)
 
-```
-	http://vm.local/app
-```
-
-![image-20211024222259232](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024222259232.png)
-
-```
-	http://vm.local/blog
-```
-
-![image-20211024222334095](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024222334095.png)
 
 ### Analysis
 
