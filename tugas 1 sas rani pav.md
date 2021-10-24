@@ -18,7 +18,7 @@ sudo lxc-ls -f
 sudo lxc-copy -R -n ubuntu_php5.6 -N ubuntu_landing
 ```
 <p align="center">
-      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.2.PNG">
 </p>
 
 1.3 Menampikan Container setelah dirubah	
@@ -26,7 +26,7 @@ sudo lxc-copy -R -n ubuntu_php5.6 -N ubuntu_landing
 sudo lxc-ls -f
 ```
 <p align="center">
-      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.3.jpeg">
 </p>
 
 1.4 Start Ubuntu landing
@@ -34,7 +34,7 @@ sudo lxc-ls -f
 sudo lxc-start ubuntu_landing
 ```
 <p align="center">
-      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.4.PNG">
 </p>
 
 1.5 Masuk ke root ubuntu_landing container
@@ -42,7 +42,7 @@ sudo lxc-start ubuntu_landing
 sudo lxc-attach ubuntu_landing
 ```
 <p align="center">
-      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.5.PNG">
 </p>
 
 1.6 Setting IP yang mengikuti skema baru
@@ -50,7 +50,7 @@ sudo lxc-attach ubuntu_landing
 nano /etc/network/interfaces
 ```
 <p align="center">
-      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.6.PNG">
 </p>
 
 1.7 Restart container
@@ -59,7 +59,7 @@ shutdown now
 sudo lxc-start ubuntu_landing
 ```
 <p align="center">
-      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.7.PNG">
 </p>
 
 1.8 Setelah Restart lalu check IP apakh sudah berubah
@@ -68,7 +68,7 @@ lxc-attach ubuntu_landing
 ifconfig
 ```
 <p align="center">
-      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.1.jpeg">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/1.8.PNG">
 </p>
 Dan IP sudah berubah menjadi 10.0.3.103
 
