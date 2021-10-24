@@ -82,20 +82,26 @@ Inilah step bagaimana merename ubuntu_php5.6 menjadi ubuntu_landing, serta merub
 ```
 sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release stretch --arch amd64 --force-cache --no-validate --server images.linuxcontainers.org
 ```
-   ![image-20211024193638291](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024193638291.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/2.1.PNG">
+</p>
 
 2.2 Cek container apakah sudah berhasil terinstall
 ```
 sudo lxc-ls -f 
 ```
-![image-20211024200042885](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024200042885.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/2.2.PNG">
+</p>
 
 2.3 Start debian_php 5.6
 ```
 sudo lxc-start -n debian_php5.6 -d
 sudo lxc-attach -n debian_php5.6
 ```
-![image-20211024201325655](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024201325655.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/2.3.PNG">
+</p>
 
 
 
@@ -105,60 +111,76 @@ sudo lxc-attach -n debian_php5.6
 ```
 sudo apt install nginx nginx-extras
 ```
-   ![image-20211024200944627](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024200944627.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.1.PNG">
+</p>
 
 3.2 Setelah itu install net tools
 ```
 apt install nano net-tools curl
 ```
-   ![image-20211024202229659](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024202229659.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.2.PNG">
+</p>
 
 3.3 Lalu kita harus setting IP 
 ```
 nano /etc/network/interfaces
 ```
-![image-20211024202637080](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024202637080.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.3.PNG">
+</p>
 
 3.4 Lalu restart kontainer
 Pertama reboot, setelah itu buka ifconfig untuk mengecek apakah IP telah berubah atau tidak.
-![image-20211024202741756](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024202741756.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.4.PNG">
+</p>
 
 3.5 Setting nginx
 Setelah itu setting nginx ikuti kode dibawah ini:
-![image-20211024203721823](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024203721823.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.5.PNG">
+</p>
 
 3.6 Mulai nano untuk konfigurasi
 ```
 nano lxc_php5.6.dev
 ```
-![image-20211024204608264](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024204608264.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.6.PNG">
+</p>
 
 3.7 Setting hosts
 ```
 nano /etc/hosts
 ```
-
-​     ![image-20211024204452250](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024204452250.png)
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.7.1.PNG">
+</p>
 
 ```
 nano index.html
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.7.PNG">
+</p>
 
-​           ![image-20211024205019655](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024205019655.png)
+3.8 Setelah itu, kita membutuhkan untuk mengecek code di index.html
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.8.PNG">
+</p>
 
-​     3.8 Setelah itu, kita membutuhkan untuk mengecek code di index.html
-
-![image-20211024205215486](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024205215486.png)
-
-​     3.9 Setelah itu curl -i
-
+3.9 Setelah itu curl -i
 ```
-          curl -i http://lxc_php5.dev 
+curl -i http://lxc_php5.dev 
 ```
-
-  ![image-20211024210429614](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024210429614.png)
-
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/3.9.PNG">
+</p>
 Yang dapat kita simpulkan yaitu kita membutuhkan memasukkan cd lxc_php5.6 sebelum kita memasukkan nano index.html
+
+
 
 4. Setup nginx pada ubuntu_landing untuk domain http://lxc_landing.dev , buat halaman index.html yang menerangkan informasi nama lxc
 
