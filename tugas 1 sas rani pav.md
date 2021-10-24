@@ -25,7 +25,7 @@
 
 ​        1.4 Start Ubuntu landing
 
-​               sudo lxc-start ubuntu_landing
+		sudo lxc-start ubuntu_landing
 
 ![](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024190344879.png)
 
