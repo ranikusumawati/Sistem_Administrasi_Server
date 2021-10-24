@@ -6,8 +6,9 @@
 **1. Rename ubuntu_php5.6 menjadi ubuntu_landing, serta rubah IP mengikuti skema yang baru**
 	1.1 Menampikan Container sebelum dirubah 
 	
-		sudo lxc-ls -f
-
+      		```
+      		sudo lxc-ls -f
+      		```
 ![1 fix](C:\Users\USEER\Downloads\1 fix.jpeg)
 	1.2 Kode ini untuk menyalin daripada mengubah nama container dari ubuntu_php5.6 menjadi ubuntu_landing.
 
