@@ -222,41 +222,43 @@ curl -i http://lxc_landing.dev
 
 
 
-5. LXC ubuntu_landing harus auto start ketika vm dinyalakan, hal ini digunakan untuk menjaga agar website company profile tidak mengalami *downtime*
+### 5. LXC ubuntu_landing harus auto start ketika vm dinyalakan, hal ini digunakan untuk menjaga agar website company profile tidak mengalami *downtime*
 
-   5.1 Masuk ke Super User atau Sudo su untuk masuk halaman config
-
+5.1 Masuk ke Super User atau Sudo su untuk masuk halaman config
 ```
-    sudo su
-    cd /var/lib/lxc/ubuntu_landing
-    nano config
+sudo su
+cd /var/lib/lxc/ubuntu_landing
+nano config
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/5.1.PNG">
+</p>
 
-![image-20211024215223823](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024215223823.png)
-
-​       5.2 Lalu tambahkan 
-
+5.2 Lalu tambahkan 
 ```
-    lxc.start.auto = 1
+lxc.start.auto = 1
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/5.2.PNG">
+</p>
 
-![image-20211024215316449](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024215316449.png)
-
-​       5.3 Keluar dari super user lalu reboot
-
+5.3 Keluar dari super user lalu reboot
 ```
-	 reboot
+reboot
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/5.3.PNG">
+</p>
 
-![image-20211024215626321](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024215626321.png)
-
-​        5.4 Lalu cek ubuntu_landing autostart telah berjalan atau tidak. jika autostart telah berjalan, autostart akan berubah dari '0' ke '1'
-
+5.4 Lalu cek ubuntu_landing autostart telah berjalan atau tidak. jika autostart telah berjalan, autostart akan berubah dari '0' ke '1'
 ```
-	sudo lxc-ls -f
+sudo lxc-ls -f
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/5.4.PNG">
+</p>
 
-![image-20211024215822864](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024215822864.png)
+
 
 6. Setup nginx pada vm.local untuk mengatur *proxy_pass* dimana :
 
