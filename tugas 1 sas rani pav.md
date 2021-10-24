@@ -260,58 +260,59 @@ sudo lxc-ls -f
 
 
 
-6. Setup nginx pada vm.local untuk mengatur *proxy_pass* dimana :
+### 6. Setup nginx pada vm.local untuk mengatur *proxy_pass* dimana :
 
-   6.1 Masuk pada nano
-
+6.1 Masuk pada nano
 ```
-	sudo nano /etc/hosts
+sudo nano /etc/hosts
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/6.1.PNG">
+</p>
 
-![image-20211024220135827](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024220135827.png)
-
-​        6.2 Setelah itu kita harus install nginx, lalu mulai directory bagian yang available,lalu mulai nano vm.local dan edit nano vm.local
-
+6.2 Setelah itu kita harus install nginx, lalu mulai directory bagian yang available,lalu mulai nano vm.local dan edit nano vm.local
 ```
-    sudo apt install nginx nginx-extras
-    cd /etc/nginx/sites-available
-    sudo touch vm.local
-    sudo nano vm.local
+sudo apt install nginx nginx-extras
+cd /etc/nginx/sites-available
+sudo touch vm.local
+sudo nano vm.local
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/6.2.PNG">
+</p>
 
-![image-20211024220624494](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024220624494.png)
-
-​      6.3 Setelah itu masuk pada directory bagian enabled, jika nginx gagal untuk di dimulai, jalankan sudo nginx-t untuk menemukannya jika ada kesalahan dengan konfigurasi file. Jika nginx error di beberapa konfigurasi file, ulangi dan tetap jalankan configurasi file sebelumnya.
-
+6.3 Setelah itu masuk pada directory bagian enabled, jika nginx gagal untuk di dimulai, jalankan sudo nginx-t untuk menemukannya jika ada kesalahan dengan konfigurasi file. Jika nginx error di beberapa konfigurasi file, ulangi dan tetap jalankan configurasi file sebelumnya.
 ```
-    cd ../sites-enabled
-    sudo nginx -t
-    sudo nginx -s reload
-```
-
-​	  6.4 Mengakses [http://vm.local](http://vm.local/) akan diarahkan ke http://lxc_landing.dev
-
-```
-	curl -i http://vm.local/blog
+cd ../sites-enabled
+sudo nginx -t
+sudo nginx -s reload
 ```
 
-![image-20211024221944292](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024221944292.png)
-
-​      6.5 Mengakses http://vm.local/blog akan diarahkan ke http://lxc_php7.dev
-
+6.4 Mengakses [http://vm.local](http://vm.local/) akan diarahkan ke http://lxc_landing.dev
 ```
-	curl -i http://vm.local/
+curl -i http://vm.local/blog
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/6.4.PNG">
+</p>
 
-![image-20211024222031497](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024222031497.png)
-
-​      6.7 Mengakses http://vm.local/app  akan diarahkan ke http://lxc_php5.dev
-
+6.5 Mengakses http://vm.local/blog akan diarahkan ke http://lxc_php7.dev
 ```
-	curl -i http://vm.local/app
+curl -i http://vm.local/
 ```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/6.5.PNG">
+</p>
 
-![image-20211024222008751](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024222008751.png)
+6.7 Mengakses http://vm.local/app  akan diarahkan ke http://lxc_php5.dev
+```
+curl -i http://vm.local/app
+```
+<p align="center">
+      	<img src= "https://github.com/ranikusumawati/Sistem_Administrasi_Server/blob/main/asset/6.6.PNG">
+</p>
+
+
 
 7. Untuk kebutuhan presentasi mereka, browser di laptop mereka harus dapat mengakses ketiga url tersebut.
 
