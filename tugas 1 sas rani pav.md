@@ -3,67 +3,65 @@
 ## Kelompok 3
 
 
-**1. Rename ubuntu_php5.6 menjadi ubuntu_landing, serta rubah IP mengikuti skema yang baru**
-a. Menampikan Container sebelum dirubah
+### 1. Rename ubuntu_php5.6 menjadi ubuntu_landing, serta rubah IP mengikuti skema yang baru
+
+1.1 Menampikan Container sebelum dirubah
 ```
 sudo lxc-ls -f
 ```
 ![1 fix](C:\Users\USEER\Downloads\1 fix.jpeg)
-	1.2 Kode ini untuk menyalin daripada mengubah nama container dari ubuntu_php5.6 menjadi ubuntu_landing.
 
- 		sudo lxc-copy -R -n ubuntu_php5.6 -N ubuntu_landing
-
+1.2 Kode ini untuk menyalin daripada mengubah nama container dari ubuntu_php5.6 menjadi ubuntu_landing.
+```
+sudo lxc-copy -R -n ubuntu_php5.6 -N ubuntu_landing
+```
 ![image-20211024190208627](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024190208627.png)
 
-	1.3 Menampikan Container setelah dirubah	
-
-		sudo lxc-ls -f
-
+1.3 Menampikan Container setelah dirubah	
+```
+sudo lxc-ls -f
+```
 ![1.1f](C:\Users\USEER\Downloads\1.1f.jpeg)
 
-
-
-​        1.4 Start Ubuntu landing
-
-		sudo lxc-start ubuntu_landing
-
+1.4 Start Ubuntu landing
+```
+sudo lxc-start ubuntu_landing
+```
 ![](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024190344879.png)
 
-​        1.5 Masuk ke root ubuntu_landing container
-
-​			  sudo lxc-attach ubuntu_landing
-
+1.5 Masuk ke root ubuntu_landing container
+```
+sudo lxc-attach ubuntu_landing
+```
 ![image-20211024190514738](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024190514738.png)
 
-​        1.6 Setting IP yang mengikuti skema baru
-
-​               nano /etc/network/interfaces
-
+1.6 Setting IP yang mengikuti skema baru
+```
+nano /etc/network/interfaces
+```
 ![image-20211024191256525](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024191256525.png)
 
-​        1.7 Restart container
-
-​				shutdown now
-
-​				sudo lxc-start ubuntu_landing
-
+1.7 Restart container
+```
+shutdown now
+sudo lxc-start ubuntu_landing
+```
 ![image-20211024191906084](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024191906084.png)
 
-​        1.8 Setelah Restart lalu check IP apakh sudah berubah
-
-​               lxc-attach ubuntu_landing
-
-​               ifconfig
-
+1.8 Setelah Restart lalu check IP apakh sudah berubah
+```
+lxc-attach ubuntu_landing
+ifconfig
+```
 ![image-20211024192907362](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024192907362.png)
 
-​             Dan IP sudah berubah menjadi 10.0.3.103
+Dan IP sudah berubah menjadi 10.0.3.103
 
 Inilah step bagaimana merename ubuntu_php5.6 menjadi ubuntu_landing, serta merubah IP mengikuti skema yang baru.
 
 
 
-2. Install lxc debian 9 dengan nama debian_php5.6
+### 2. Install lxc debian 9 dengan nama debian_php5.6
 
    2.1 Install lxc debian 9
 
