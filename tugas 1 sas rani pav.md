@@ -63,72 +63,64 @@ Inilah step bagaimana merename ubuntu_php5.6 menjadi ubuntu_landing, serta merub
 
 ### 2. Install lxc debian 9 dengan nama debian_php5.6
 
-   2.1 Install lxc debian 9
-
-   sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release stretch --arch amd64 --force-cache --no-validate --server images.linuxcontainers.org
-
+2.1 Install lxc debian 9
+```
+sudo lxc-create -n debian_php5.6 -t download -- --dist debian --release stretch --arch amd64 --force-cache --no-validate --server images.linuxcontainers.org
+```
    ![image-20211024193638291](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024193638291.png)
 
-​       2.2 Cek container apakah sudah berhasil terinstall
-
-​       Sudo lxc-ls -f 
-
+2.2 Cek container apakah sudah berhasil terinstall
+```
+sudo lxc-ls -f 
+```
 ![image-20211024200042885](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024200042885.png)
 
-​       2.3 Start debian_php 5.6
-
-​				Sudo lxc-start -n debian_php5.6 -d
-
-​			    Sudo lxc-attach -n debian_php5.6
-
+2.3 Start debian_php 5.6
+```
+sudo lxc-start -n debian_php5.6 -d
+sudo lxc-attach -n debian_php5.6
+```
 ![image-20211024201325655](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024201325655.png)
 
 
 
-3. Setup nginx pada debian_php5.6 untuk domain http://lxc_php5.dev , buat halaman index.html yang menerangkan informasi nama lxc
+### 3. Setup nginx pada debian_php5.6 untuk domain http://lxc_php5.dev , buat halaman index.html yang menerangkan informasi nama lxc
 
-   3.1 Pertama cek apakah ubuntu_php5.6 berjalan, setelah itu install nginx
-
-   ​	  sudo apt install nginx nginx-extras
-
+3.1 Pertama cek apakah ubuntu_php5.6 berjalan, setelah itu install nginx
+```
+sudo apt install nginx nginx-extras
+```
    ![image-20211024200944627](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024200944627.png)
 
-   3.2 Setelah itu install net tools
-
-   ​	  apt install nano net-tools curl
-
+3.2 Setelah itu install net tools
+```
+apt install nano net-tools curl
+```
    ![image-20211024202229659](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024202229659.png)
 
-​       3.3 Lalu kita harus setting IP 
-
-​			 nano /etc/network/interfaces
-
+3.3 Lalu kita harus setting IP 
+```
+nano /etc/network/interfaces
+```
 ![image-20211024202637080](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024202637080.png)
 
-​      3.4 Lalu restart kontainer
-
-​             Pertama reboot, setelah itu buka ifconfig untuk mengecek apakah IP telah berubah atau tidak.
-
+3.4 Lalu restart kontainer
+Pertama reboot, setelah itu buka ifconfig untuk mengecek apakah IP telah berubah atau tidak.
 ![image-20211024202741756](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024202741756.png)
 
-​      3.5 Setting nginx
-
-​			Setelah itu setting nginx ikuti kode dibawah ini:
-
+3.5 Setting nginx
+Setelah itu setting nginx ikuti kode dibawah ini:
 ![image-20211024203721823](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024203721823.png)
 
-​      3.6 Mulai nano untuk konfigurasi
-
+3.6 Mulai nano untuk konfigurasi
 ```
-			nano lxc_php5.6.dev
+nano lxc_php5.6.dev
 ```
-
 ![image-20211024204608264](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024204608264.png)
 
-​      3.7 Setting hosts
-
+3.7 Setting hosts
 ```
-             nano /etc/hosts
+nano /etc/hosts
 ```
 
 ​     ![image-20211024204452250](C:\Users\USEER\AppData\Roaming\Typora\typora-user-images\image-20211024204452250.png)
